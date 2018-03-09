@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map.Entry;
+import java.util.Random;
 import java.util.Set;
 import java.util.TreeMap;
 import java.awt.KeyEventDispatcher;
@@ -161,14 +162,14 @@ public class Main extends JPanel  implements  MouseListener, MouseMotionListener
 		}
 	}
 
-
+	Random seed = new Random(2);
 
 	void initialize()
 	{
 
-		for(int i = 0; i < 500; i++)
+		for(int i = 0; i < 1000; i++)
 		{
-			MAP[(int)(Math.random()*xsize)][(int)(Math.random()*ysize)] = 1;
+			MAP[(int)(seed.nextDouble()*xsize)][(int)(seed.nextDouble()*ysize)] = 1;
 		}
 
 
@@ -397,11 +398,11 @@ public class Main extends JPanel  implements  MouseListener, MouseMotionListener
 		JFrame frame = new JFrame("Pathfinder");
 		Main game = new Main();
 		frame.add(game);
-		frame.setSize(1000, 700);
+		frame.setSize(500, 500);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		game.initialize();
-		while (true) 
+		for(int i = 0; i < 30; i++)
 		{
 			game.functions();
 			game.repaint(10);
