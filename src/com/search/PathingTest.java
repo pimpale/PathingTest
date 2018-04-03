@@ -27,9 +27,9 @@ import java.awt.event.KeyEvent;
 
 
 @SuppressWarnings("serial")
-public class Main extends JPanel  implements  MouseListener, MouseMotionListener
+public class PathingTest extends JPanel  implements  MouseListener, MouseMotionListener
 {	
-	public Main()
+	public PathingTest()
 	{
 		addMouseListener(this);
 		addMouseMotionListener(this);	 
@@ -396,7 +396,7 @@ public class Main extends JPanel  implements  MouseListener, MouseMotionListener
 	public static void main(String[] args) throws InterruptedException 
 	{
 		JFrame frame = new JFrame("Pathfinder");
-		Main game = new Main();
+		PathingTest game = new PathingTest();
 		frame.add(game);
 		frame.setSize(500, 500);
 		frame.setVisible(true);
