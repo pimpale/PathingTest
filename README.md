@@ -1,4 +1,4 @@
-# pathing-test
+# PathingTest
 A very very simple test of a pathfinding algorithm.
 
 ![Alt text](./res/screenshot10.png?raw=true "After 10 Steps")
